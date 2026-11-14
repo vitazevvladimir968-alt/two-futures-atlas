@@ -96,7 +96,7 @@ void main() {
   vec3 N = normalize(vNormalW);
   float nl = dot(N, normalize(uSunDir));
   float a = texture2D(uClouds, vUv).r;
-  a = smoothstep(0.08, 0.9, a) * uOpacity;
+  a = smoothstep(0.035, 0.72, a) * uOpacity;
   float light = smoothstep(-0.15, 0.35, nl) * (0.35 + 0.75 * max(nl, 0.0));
   vec3 col = uTint * (light + 0.004);
   gl_FragColor = vec4(col, a * (0.12 + 0.88 * smoothstep(-0.25, 0.15, nl)));
