@@ -3,14 +3,17 @@ import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { useFutures, type TextureLayer } from "@/store/futures";
 
+// Public Three.js example assets are used so the project can build without
+// carrying large binary texture files in the repository.
+const TEXTURE_BASE = "https://threejs.org/examples/textures/planets";
 export const TEXTURE_URLS: Record<TextureLayer, string> = {
-  day: "/textures/earth-day-2048.jpg",
-  night: "/textures/earth-night-2048.jpg",
-  normal: "/textures/earth-normal-2048.jpg",
-  ocean: "/textures/earth-ocean-mask-2048.jpg",
-  clouds: "/textures/earth-clouds-2048.jpg",
+  day: `${TEXTURE_BASE}/earth_atmos_2048.jpg`,
+  night: `${TEXTURE_BASE}/earth_lights_2048.png`,
+  normal: `${TEXTURE_BASE}/earth_normal_2048.jpg`,
+  ocean: `${TEXTURE_BASE}/earth_specular_2048.jpg`,
+  clouds: `${TEXTURE_BASE}/earth_clouds_1024.png`,
 };
-export const DAY_HI_RES_URL = "/textures/earth-day-3840.jpg";
+export const DAY_HI_RES_URL = TEXTURE_URLS.day;
 
 export type EarthUniforms = {
   [K in "uDay" | "uNight" | "uNormal" | "uOcean" | "uClouds"]: { value: THREE.Texture };
@@ -97,14 +100,8 @@ export function useEarthTextures(): EarthUniforms {
     };
 
     const maybeUpgradeDay = () => {
-      const coarse = window.matchMedia("(pointer: coarse)").matches;
-      const big = window.innerWidth >= 1024 && gl.capabilities.maxTextureSize >= 4096;
-      if (coarse || !big) return;
-      loader.load(DAY_HI_RES_URL, (tex) => {
-        if (cancelled) return tex.dispose();
-        apply("uDay", tex, true);
-        setHiRes(true);
-      });
+      // The public source is already 2K; avoid downloading the same image twice.
+      setHiRes(false);
     };
 
     load("day", "uDay", true);
