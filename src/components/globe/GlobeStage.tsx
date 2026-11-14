@@ -46,7 +46,7 @@ function StaticFallback({ reason, onRetry }: { reason: string; onRetry?: () => v
   return (
     <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-6 text-center">
       <img
-        src="/textures/earth-day-2048.jpg"
+        src="https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-topography-bathymetry/january/world.topo.bathy.200401.3x5400x2700.jpg"
         alt="Плоская карта Земли (NASA Blue Marble, 2002)"
         className="w-full max-w-xl rounded-lg border border-border opacity-80"
       />
@@ -89,7 +89,7 @@ function TextureStatus() {
       ) : loading.length > 0 ? (
         <span>Загрузка текстур: {loading.map(([k]) => LAYER_NAMES[k]).join(", ")}…</span>
       ) : (
-        <span className="text-success">Текстуры загружены{hiRes ? " · 3840 px" : " · 2048 px"}</span>
+        <span className="text-success">Текстуры загружены · NASA Blue Marble 5.4K</span>
       )}
     </div>
   );
@@ -155,7 +155,7 @@ export function GlobeStage() {
           <SunInfo />
         </ClientOnly>
         <span>
-          Изображения NASA: Blue Marble (2002), Earth at Night (2012) — архивные мозаики, не live-съёмка. Облака —
+          NASA Blue Marble Next Generation (январь 2004, 5.4K) — архивная мозаика с рельефом, не live-съёмка. Ночные огни — архивная карта 2012 года. Облака —
           иллюстративный слой (Solar System Scope, CC BY 4.0).
         </span>
       </div>
