@@ -1,3 +1,29 @@
-# Two Futures Atlas
+# TWO FUTURES — ДВА БУДУЩИХ
 
-Source migration from Lovable is in progress. The complete application source and public assets are being transferred before Cloudflare Pages deployment.
+Интерактивный атлас двух возможных сценариев развития человечества на 3D-глобусе.
+
+**Девиз:** «БУДУЩЕЕ НЕ НУЖНО ЖДАТЬ. ЕГО МОЖНО СОЗДАВАТЬ ВМЕСТЕ.»
+
+## Технологии
+- React 19, TypeScript, Vite
+- TanStack Start / Router
+- Three.js, React Three Fiber, Drei
+- Zustand, Tailwind CSS
+
+## Локальный запуск
+```bash
+bun install
+bun run dev
+```
+
+## Проверки
+```bash
+bun run test
+bun run build
+```
+
+## Важное замечание о данных
+Показатели и траектории сценариев являются демонстрационной моделью, а не официальными прогнозами или измерениями.
+
+## Состояние переноса
+Исходники приложения перенесены из проекта Lovable в этот репозиторий. Перед публикацией необходимо восстановить оригинальные бинарные текстуры в `public/textures/` и выполнить чистую установку зависимостей, тесты и production-сборку. Не считать репозиторий готовым к публикации до успешной проверки.
