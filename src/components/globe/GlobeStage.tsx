@@ -76,7 +76,6 @@ const LAYER_NAMES: Record<TextureLayer, string> = {
 
 function TextureStatus() {
   const textures = useFutures((s) => s.textures);
-  const hiRes = useFutures((s) => s.hiResDay);
   const entries = Object.entries(textures) as [TextureLayer, string][];
   const errors = entries.filter(([, v]) => v === "error");
   const loading = entries.filter(([, v]) => v === "loading");
