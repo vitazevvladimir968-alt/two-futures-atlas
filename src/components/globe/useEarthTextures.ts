@@ -12,7 +12,7 @@ export const TEXTURE_URLS: Record<TextureLayer, string> = {
   night: `${TEXTURE_BASE}/earth_lights_2048.png`,
   normal: `${TEXTURE_BASE}/earth_normal_2048.jpg`,
   ocean: `${TEXTURE_BASE}/earth_specular_2048.jpg`,
-  clouds: `${TEXTURE_BASE}/earth_clouds_1024.png`,
+  clouds: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Solarsystemscope_texture_8k_earth_clouds.jpg/3840px-Solarsystemscope_texture_8k_earth_clouds.jpg",
 };
 export const DAY_HI_RES_URL = TEXTURE_URLS.day;
 
@@ -76,6 +76,9 @@ export function useEarthTextures(): EarthUniforms {
     const apply = (key: keyof EarthUniforms, tex: THREE.Texture, srgb: boolean) => {
       tex.colorSpace = srgb ? THREE.SRGBColorSpace : THREE.NoColorSpace;
       tex.anisotropy = aniso;
+      tex.generateMipmaps = true;
+      tex.minFilter = THREE.LinearMipmapLinearFilter;
+      tex.magFilter = THREE.LinearFilter;
       tex.wrapS = THREE.RepeatWrapping;
       const prev = uniforms[key].value;
       uniforms[key].value = tex;
