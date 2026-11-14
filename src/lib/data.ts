@@ -241,11 +241,11 @@ export interface DataSource {
 export const TEXTURE_SOURCES: DataSource[] = [
   {
     layer: "Дневная поверхность",
-    title: "Blue Marble: Land Surface, Shallow Water, and Shaded Topography",
-    date: "Опубликовано NASA 11.02.2002 (мозаика MODIS, безоблачная)",
-    origin: "NASA Goddard Space Flight Center, Visible Earth #57752 (копия на Wikimedia Commons)",
-    license: "Общественное достояние (NASA)",
-    url: "https://commons.wikimedia.org/wiki/File:Land_shallow_topo_2048.jpg",
+    title: "Blue Marble: Next Generation with Topography and Bathymetry (January 2004, 5400×2700)",
+    date: "Январь 2004; глобальная мозаика NASA Blue Marble Next Generation",
+    origin: "NASA Earth Observatory / NASA Science",
+    license: "Материалы NASA — общественное достояние; сохранять указание источника",
+    url: "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-topography-bathymetry/",
   },
   {
     layer: "Ночные огни",
