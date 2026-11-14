@@ -45,8 +45,8 @@ function Index() {
   const baseline = useMemo(() => allIndices(scenario, START_YEAR, region?.modifier), [scenario, region]);
 
   return (
-    <div className="mx-auto grid max-w-[1600px] lg:h-[calc(100svh-3.5rem)] lg:grid-cols-[minmax(0,1fr)_420px]">
-      <section aria-label="3D глобус" className="relative h-[58svh] min-h-[340px] lg:h-full">
+    <div className="mx-auto grid w-full max-w-[1720px] gap-0 lg:h-[calc(100svh-4rem)] lg:grid-cols-[minmax(0,1fr)_400px]">
+      <section aria-label="3D глобус" className="relative h-[64svh] min-h-[420px] overflow-hidden border-b border-border bg-[#050a12] lg:h-full lg:min-h-[680px] lg:rounded-br-2xl lg:border-r">
         <GlobeStage />
         <div className="pointer-events-none absolute left-3 top-3 flex flex-col gap-1.5 sm:left-4 sm:top-4">
           <span className="eyebrow">Сценарий · {year}</span>
@@ -57,8 +57,8 @@ function Index() {
         </div>
       </section>
 
-      <aside className="flex flex-col gap-4 border-border p-4 lg:overflow-y-auto lg:border-l">
-        <div className="panel flex flex-col gap-3 p-4">
+      <aside className="flex flex-col gap-3 border-border bg-background/70 p-3 sm:p-4 lg:overflow-y-auto lg:border-l lg:bg-background/50">
+        <div className="panel flex flex-col gap-3 p-4 shadow-[0_16px_48px_-28px_rgba(0,0,0,0.9)]">
           <div className="flex items-center justify-between">
             <h2 className="text-sm font-semibold">Сценарий</h2>
             <DemoTag>Модельное допущение</DemoTag>
