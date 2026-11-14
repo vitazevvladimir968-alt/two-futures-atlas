@@ -10,14 +10,14 @@ const NAV = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-14 max-w-[1600px] items-center gap-4 px-4">
+      <div className="mx-auto flex h-16 max-w-[1600px] items-center gap-4 px-4 sm:px-6">
         <Link to="/" className="flex shrink-0 items-center gap-2.5" aria-label="TWO FUTURES — на главную">
-          <span className="relative flex h-6 w-6 items-center justify-center" aria-hidden>
-            <span className="absolute h-6 w-6 rounded-full border border-coop/80 -translate-x-1" />
-            <span className="absolute h-6 w-6 rounded-full border border-conf/80 translate-x-1" />
+          <span className="relative flex h-8 w-8 items-center justify-center" aria-hidden>
+            <span className="absolute h-7 w-7 rounded-full border border-coop/80 -translate-x-1" />
+            <span className="absolute h-7 w-7 rounded-full border border-conf/80 translate-x-1" />
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-display text-sm font-semibold tracking-wide">TWO FUTURES</span>
+            <span className="font-display text-[15px] font-semibold tracking-[0.08em]">TWO FUTURES</span>
             <span className="font-mono text-[9px] tracking-[0.2em] text-muted-foreground">ДВА БУДУЩИХ</span>
           </span>
         </Link>
