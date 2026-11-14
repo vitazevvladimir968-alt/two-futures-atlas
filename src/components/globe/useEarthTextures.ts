@@ -6,8 +6,9 @@ import { useFutures, type TextureLayer } from "@/store/futures";
 // Public Three.js example assets are used so the project can build without
 // carrying large binary texture files in the repository.
 const TEXTURE_BASE = "https://threejs.org/examples/textures/planets";
+const NASA_BLUE_MARBLE = "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-topography-bathymetry/january/world.topo.bathy.200401.3x5400x2700.jpg";
 export const TEXTURE_URLS: Record<TextureLayer, string> = {
-  day: `${TEXTURE_BASE}/earth_atmos_2048.jpg`,
+  day: NASA_BLUE_MARBLE,
   night: `${TEXTURE_BASE}/earth_lights_2048.png`,
   normal: `${TEXTURE_BASE}/earth_normal_2048.jpg`,
   ocean: `${TEXTURE_BASE}/earth_specular_2048.jpg`,
