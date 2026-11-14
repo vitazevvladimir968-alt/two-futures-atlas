@@ -48,12 +48,12 @@ function Index() {
     <div className="mx-auto grid w-full max-w-[1720px] gap-0 lg:h-[calc(100svh-4rem)] lg:grid-cols-[minmax(0,1fr)_400px]">
       <section aria-label="3D глобус" className="relative h-[64svh] min-h-[420px] overflow-hidden border-b border-border bg-[#050a12] lg:h-full lg:min-h-[680px] lg:rounded-br-2xl lg:border-r">
         <GlobeStage />
-        <div className="pointer-events-none absolute left-3 top-3 flex flex-col gap-1.5 sm:left-4 sm:top-4">
-          <span className="eyebrow">Сценарий · {year}</span>
-          <span className="font-display text-lg font-semibold text-scenario sm:text-2xl">{SCENARIOS[scenario].name}</span>
-          <span className="hidden text-xs text-muted-foreground sm:block">
-            Перетащите — вращение · колесо или щипок — масштаб
-          </span>
+        <div className="pointer-events-none absolute left-4 top-4 z-10 flex max-w-[min(90%,560px)] flex-col gap-2 sm:left-7 sm:top-7">
+          <span className="eyebrow text-cyan-100/70">ПЛАНЕТАРНЫЙ АТЛАС · {year}</span>
+          <h1 className="font-display text-2xl font-semibold leading-tight tracking-tight text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.8)] sm:text-4xl">ОДНА ПЛАНЕТА.<br/>ДВА БУДУЩИХ.</h1>
+          <span className="max-w-sm text-xs leading-relaxed text-white/75 drop-shadow sm:text-sm">Исследуйте Землю и сравнивайте два возможных пути человечества</span>
+          <span className="mt-1 w-fit rounded-full border border-white/20 bg-black/35 px-3 py-1.5 text-[10px] text-white/80 backdrop-blur-md sm:text-xs">СЕЙЧАС: {SCENARIOS[scenario].name} · {year}</span>
+          <span className="hidden text-xs text-white/65 sm:block">Вращение — перетаскивание · приближение — колесо или щипок</span>
         </div>
       </section>
 
