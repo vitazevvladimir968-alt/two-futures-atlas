@@ -154,8 +154,7 @@ export function GlobeStage() {
           <SunInfo />
         </ClientOnly>
         <span>
-          NASA Blue Marble Next Generation (январь 2004, 5.4K) — архивная мозаика с рельефом, не live-съёмка. Ночные огни — архивная карта 2012 года. Облака —
-          иллюстративный слой (Solar System Scope, CC BY 4.0).
+          NASA Blue Marble Next Generation (январь 2004, 5.4K) — архивная мозаика с рельефом, не live-съёмка. Ночные огни — архивная карта 2012 года. Облачный покров — Solar System Scope, 4K, CC BY 4.0; отдельный мягкий слой над поверхностью.
         </span>
       </div>
     </div>
